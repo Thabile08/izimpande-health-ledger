@@ -226,3 +226,86 @@ appointments -> patients
 appointments -> institutions
 
 audit_logs -> users
+
+
+
+# Blockchain-Inspired Health Ledger
+
+## Overview
+
+Izimpande Health Ledger uses blockchain-inspired principles to improve trust, transparency, accountability, and data integrity within healthcare records.
+
+The system does not implement a full blockchain network. Instead, it adopts core ledger concepts that are practical for a web-based healthcare platform.
+
+---
+
+## Core Principles
+
+### Immutable Audit Trail
+
+Every significant action performed in the system is recorded in the audit_logs table.
+
+Examples:
+
+* Health record created
+* Health record updated
+* Medication added
+* Appointment booked
+* User login
+
+Records are never silently modified without creating a corresponding audit entry.
+
+---
+
+### Timestamped Events
+
+All ledger entries include timestamps.
+
+Example:
+
+2026-06-15 08:30:12
+
+This allows administrators and healthcare professionals to track the complete history of a patient's records.
+
+---
+
+### User Accountability
+
+Each ledger event stores the user responsible for the action.
+
+Example:
+
+User: Nurse Mkhize
+
+Action: UPDATE_RECORD
+
+Timestamp: 2026-06-15 08:30:12
+
+---
+
+### Record Integrity
+
+Future versions of the system may generate cryptographic hashes for health records.
+
+The hash can be used to detect unauthorized changes to stored data.
+
+---
+
+## Benefits
+
+* Improved trust
+* Increased accountability
+* Enhanced transparency
+* Better healthcare record management
+* Easier compliance and auditing
+
+---
+
+## Future Enhancement
+
+A future version may integrate distributed ledger technologies to support:
+
+* Multi-institution record sharing
+* Cross-clinic verification
+* Tamper-resistant health records
+* Decentralized healthcare ecosystems
